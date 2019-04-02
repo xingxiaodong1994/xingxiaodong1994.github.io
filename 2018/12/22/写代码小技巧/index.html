@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>写代码小技巧 | 邢晓栋的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="技巧1：如何实现点击不同的按钮，让相应的组件重新渲染？ 使用vue框架是我们使用v-if加一个布尔状态变量来控制组件的的渲染。 当我们点击不同的按钮时，首先使所以逐渐的布尔状态变为false,再使我们点击按钮所对应的组件的布尔状态变为true.   技巧2：当组件加载时，用vue给组件加一个向左划出的动画1234567891011121314151617&amp;lt;transition name=&quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="写代码小技巧">
+<meta property="og:url" content="http://yoursite.com/2018/12/22/写代码小技巧/index.html">
+<meta property="og:site_name" content="邢晓栋的博客">
+<meta property="og:description" content="技巧1：如何实现点击不同的按钮，让相应的组件重新渲染？ 使用vue框架是我们使用v-if加一个布尔状态变量来控制组件的的渲染。 当我们点击不同的按钮时，首先使所以逐渐的布尔状态变为false,再使我们点击按钮所对应的组件的布尔状态变为true.   技巧2：当组件加载时，用vue给组件加一个向左划出的动画1234567891011121314151617&amp;lt;transition name=&quot;">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-02T02:07:26.359Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="写代码小技巧">
+<meta name="twitter:description" content="技巧1：如何实现点击不同的按钮，让相应的组件重新渲染？ 使用vue框架是我们使用v-if加一个布尔状态变量来控制组件的的渲染。 当我们点击不同的按钮时，首先使所以逐渐的布尔状态变为false,再使我们点击按钮所对应的组件的布尔状态变为true.   技巧2：当组件加载时，用vue给组件加一个向左划出的动画1234567891011121314151617&amp;lt;transition name=&quot;">
+  
+    <link rel="alternate" href="/atom.xml" title="邢晓栋的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">邢晓栋的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-写代码小技巧" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/22/写代码小技巧/" class="article-date">
+  <time datetime="2018-12-22T02:38:10.000Z" itemprop="datePublished">2018-12-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      写代码小技巧
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>技巧1：如何实现点击不同的按钮，让相应的组件重新渲染？<ul>
+<li>使用vue框架是我们使用v-if加一个布尔状态变量来控制组件的的渲染。</li>
+<li>当我们点击不同的按钮时，首先使所以逐渐的布尔状态变为false,再使我们点击按钮所对应的组件的布尔状态变为true.</li>
+</ul>
+</li>
+<li>技巧2：当组件加载时，用vue给组件加一个向左划出的动画<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;transition name=<span class="string">"slide-fade"</span>&gt;</span><br><span class="line">  &lt;Component&gt;&lt;/Component&gt;</span><br><span class="line">&lt;<span class="regexp">/transition&gt;</span></span><br><span class="line"><span class="regexp">/</span>*</span><br><span class="line">组件滑动效果</span><br><span class="line"> *<span class="regexp">/</span></span><br><span class="line"><span class="regexp">.slide-fade-enter-active &#123;</span></span><br><span class="line"><span class="regexp">  transition: all .5s ease;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">.slide-fade-leave-active &#123;</span></span><br><span class="line"><span class="regexp">  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">.slide-fade-enter, .slide-fade-leave-to</span></span><br><span class="line"><span class="regexp">  /</span>* .slide-fade-leave-active <span class="keyword">for</span> below version <span class="number">2.1</span><span class="number">.8</span> *<span class="regexp">/ &#123;</span></span><br><span class="line"><span class="regexp">  transform: translateX(400px);</span></span><br><span class="line"><span class="regexp">  opacity: 0;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/12/22/写代码小技巧/" data-id="cjtz5epej000c9so7kun2f53p" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/01/30/dva-Loading-使用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          dva Loading 使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/12/20/bug总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">bug总结</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/02/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/02/css布局/">周记（第一篇）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/30/dva-Loading-使用/">dva Loading 使用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/22/写代码小技巧/">写代码小技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/20/bug总结/">bug总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Xiaodong Xing<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

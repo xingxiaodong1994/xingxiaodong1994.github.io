@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>git 分支建立与同步 | 邢晓栋的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="如果git status告诉你有文件被修改过，用git diff可以查看修改内容。 git log --pretty=oneline查看以前的提交 git reflog # 查看命令历史 git reset --hard commit_id # 回退到历史版本 git checkout -- [文件名] # 撤销修改到最近一次git commit或git add时的状态。 注意：文件删除错误，也">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 分支建立与同步">
+<meta property="og:url" content="http://yoursite.com/2018/12/12/git-分支建立与同步/index.html">
+<meta property="og:site_name" content="邢晓栋的博客">
+<meta property="og:description" content="如果git status告诉你有文件被修改过，用git diff可以查看修改内容。 git log --pretty=oneline查看以前的提交 git reflog # 查看命令历史 git reset --hard commit_id # 回退到历史版本 git checkout -- [文件名] # 撤销修改到最近一次git commit或git add时的状态。 注意：文件删除错误，也">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-02T02:07:26.359Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git 分支建立与同步">
+<meta name="twitter:description" content="如果git status告诉你有文件被修改过，用git diff可以查看修改内容。 git log --pretty=oneline查看以前的提交 git reflog # 查看命令历史 git reset --hard commit_id # 回退到历史版本 git checkout -- [文件名] # 撤销修改到最近一次git commit或git add时的状态。 注意：文件删除错误，也">
+  
+    <link rel="alternate" href="/atom.xml" title="邢晓栋的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">邢晓栋的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-git-分支建立与同步" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/12/git-分支建立与同步/" class="article-date">
+  <time datetime="2018-12-12T09:45:57.000Z" itemprop="datePublished">2018-12-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git 分支建立与同步
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>如果<code>git status</code>告诉你有文件被修改过，用<code>git diff</code>可以查看修改内容。</li>
+<li><code>git log --pretty=oneline</code>查看以前的提交</li>
+<li><code>git reflog</code> # 查看命令历史</li>
+<li><code>git reset --hard commit_id</code> # 回退到历史版本</li>
+<li><code>git checkout -- [文件名]</code> # 撤销修改到最近一次git commit或git add时的状态。</li>
+<li>注意：文件删除错误，也可以通过<code>git checkout -- [文件名]</code>回复。</li>
+<li><code>git reset HEAD [文件名]</code> # 丢弃已经添加到暂存区（git add .）的修改。</li>
+</ul>
+<p>以前 我只会建立一个本地分支和远程分支。<br>当我们运行<code>git init</code>后会自动建立一个本地主分支<code>master</code><br>然后我们会去github上建立一个远程仓库，运行GitHub给的命令</p>
+<p><code>git remote add origin git@github.com:[xxxxxx].git</code><br>这条命令就会把我们本地仓库和远程关联起来。</p>
+<p>然后我们运行<code>git push -u origin master</code><br>就可以把本地主分支内容提交的GitHub远程主分支仓库。</p>
+<p>注意：<br>我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+<p>以后我们只要运行<code>git push origin master</code>就可以推送最新修改</p>
+<p><code>git push origin [新远程分支名字]</code> # 建立一个远程新分支</p>
+<p>查看分支：<code>git branch</code></p>
+<p>创建分支：<code>git branch &lt;name&gt;</code></p>
+<p>切换分支：<code>git checkout &lt;name&gt;</code></p>
+<p>创建+切换分支：<code>git checkout -b &lt;name&gt;</code></p>
+<p>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></p>
+<p>删除分支：<code>git branch -d &lt;name&gt;</code></p>
+<p>克隆git仓库到本地: <code>git clone git@github.com:[xxxxxx].git</code></p>
+<p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。<br>解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。</p>
+<p><code>git log --graph</code>:查看分支合并图。</p>
+<p>修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；</p>
+<p>当手头工作没有完成时，先把工作现场<code>git stash</code>一下，然后去修复bug，修复后，再<code>git stash</code>pop，回到工作现场。</p>
+<p>如果要丢弃一个没有被合并过的分支，可以通过<code>git branch -D &lt;name&gt;</code>强行删除。<br>查看远程库信息，使用<code>git remote -v</code>；</p>
+<p>本地新建的分支如果不推送到远程，对其他人就是不可见的；</p>
+<p>从本地推送分支，使用<code>git push origin branch-name</code>，如果推送失败，先用<code>git pull</code>抓取远程的新提交；</p>
+<p>在本地创建和远程分支对应的分支，使用<code>git checkout -b branch-name origin/branch-name</code>，本地和远程分支的名称最好一致；</p>
+<p>建立本地分支和远程分支的关联，使用<code>git branch --set-upstream branch-name origin/branch-name</code>；</p>
+<p>从远程抓取分支，使用<code>git pull</code>，如果有冲突，要先处理冲突<br>命令<code>git tag &lt;tagname&gt;</code>用于新建一个标签，默认为HEAD，也可以指定一个commit id；</p>
+<p>命令<code>git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</code>可以指定标签信息；</p>
+<p>命令<code>git tag</code>可以查看所有标签。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/12/12/git-分支建立与同步/" data-id="cjtz5epe300059so7xt8lih6g" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/12/20/bug总结/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          bug总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/12/12/react-更新机制/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">react 更新机制</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/02/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/02/css布局/">周记（第一篇）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/30/dva-Loading-使用/">dva Loading 使用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/22/写代码小技巧/">写代码小技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/20/bug总结/">bug总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Xiaodong Xing<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>dva Loading 使用 | 邢晓栋的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="我们写页面的时候常常要用到loading,来表示加载状态。在dva中，dva 项目的 index.js 文件：12345import createLoading from &apos;dva-loading&apos;;const app = dva();app.use(createLoading()); export default connect(({ app, loading }) =&amp;gt; ({ app,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dva Loading 使用">
+<meta property="og:url" content="http://yoursite.com/2019/01/30/dva-Loading-使用/index.html">
+<meta property="og:site_name" content="邢晓栋的博客">
+<meta property="og:description" content="我们写页面的时候常常要用到loading,来表示加载状态。在dva中，dva 项目的 index.js 文件：12345import createLoading from &apos;dva-loading&apos;;const app = dva();app.use(createLoading()); export default connect(({ app, loading }) =&amp;gt; ({ app,">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-02T02:07:26.359Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="dva Loading 使用">
+<meta name="twitter:description" content="我们写页面的时候常常要用到loading,来表示加载状态。在dva中，dva 项目的 index.js 文件：12345import createLoading from &apos;dva-loading&apos;;const app = dva();app.use(createLoading()); export default connect(({ app, loading }) =&amp;gt; ({ app,">
+  
+    <link rel="alternate" href="/atom.xml" title="邢晓栋的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">邢晓栋的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-dva-Loading-使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/30/dva-Loading-使用/" class="article-date">
+  <time datetime="2019-01-30T08:04:23.000Z" itemprop="datePublished">2019-01-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      dva Loading 使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们写页面的时候常常要用到loading,来表示加载状态。<br>在dva中，dva 项目的 index.js 文件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> createLoading <span class="keyword">from</span> <span class="string">'dva-loading'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = dva();</span><br><span class="line"></span><br><span class="line">app.use(createLoading());</span><br></pre></td></tr></table></figure></p>
+<p><code>export default connect(({ app, loading }) =&gt; ({ app, loading }))(App);</code><br>打印一下 loading 对象，可看到内容如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">loading: &#123;</span><br><span class="line">  global: <span class="literal">false</span>,</span><br><span class="line">  models: &#123;<span class="attr">app</span>: <span class="literal">false</span>&#125;,</span><br><span class="line">  effects: &#123;<span class="attr">app</span>: <span class="literal">false</span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>loading 有三个方法，其中 loading.effects[‘user/query’] 为监听单一异步请求状态，当页面处于异步加载状态时该值为 true，当页面加载完成时，自动监听该值为 false。<br>如果同时发出若干个异步请求，需求是当所有异步请求都响应才做下一步操作，可以使用 loading.global() 方法，该方法监听所有异步请求的状态。</p>
+<p>我们使用antd框架时：<br>可以引用：<br><code>import React, {Spin} from &#39;react&#39;;</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;loading&#125;=<span class="keyword">this</span>.props</span><br><span class="line"><span class="comment">// const isShowPop=loading.effects["productAnalysisTableDataModels/fetchTableData"]</span></span><br><span class="line"><span class="keyword">const</span> isShowPop=loading.global</span><br><span class="line">render()&#123;</span><br><span class="line"> &lt;Spin spinning=&#123;isShowPop&#125;&gt;</span><br><span class="line">        &lt;div&gt;组件&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>Spin&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/30/dva-Loading-使用/" data-id="cjtz5epdn00019so77wjjgas8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/04/02/css布局/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          周记（第一篇）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/12/22/写代码小技巧/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">写代码小技巧</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/02/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/02/css布局/">周记（第一篇）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/30/dva-Loading-使用/">dva Loading 使用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/22/写代码小技巧/">写代码小技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/20/bug总结/">bug总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Xiaodong Xing<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

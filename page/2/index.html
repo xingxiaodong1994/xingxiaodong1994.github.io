@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>邢晓栋的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="邢晓栋的博客">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="邢晓栋的博客">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="邢晓栋的博客">
+  
+    <link rel="alternate" href="/atom.xml" title="邢晓栋的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">邢晓栋的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-webstorm-安装" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/11/webstorm-安装/" class="article-date">
+  <time datetime="2018-12-11T01:20:36.000Z" itemprop="datePublished">2018-12-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/11/webstorm-安装/">webstorm 安装</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="webstorm-安装"><a href="#webstorm-安装" class="headerlink" title="webstorm 安装"></a>webstorm 安装</h1><p>今天新入职，安装webstorm。</p>
+<ol>
+<li>首先进入官网下载按安装包，然后进行配置。</li>
+<li>对webStorm 进行汉化。把压缩包里的”resources_zh_CN.jar”拷贝到WebStorm安装目录下的lib目录，重启即可！</li>
+<li>压缩包下载地址(<a href="https://github.com/ewen0930/WebStorm-Chinese/releases" target="_blank" rel="noopener">https://github.com/ewen0930/WebStorm-Chinese/releases</a>)<h1 id="node更新"><a href="#node更新" class="headerlink" title="node更新"></a>node更新</h1>首先查看其版本</li>
+</ol>
+<p><code>node -v</code></p>
+<p><code>npm -v</code></p>
+<p>然后更新至最新版本</p>
+<p>更新npm ：</p>
+<p><code>npm install -g npm</code><br>更新node版本是：</p>
+<p>先清除npm缓存：<code>npm cache clean -f</code></p>
+<p>然后安装n模块：<code>npm install -g n</code> </p>
+<p>升级node.js到最新稳定版：<code>n stable</code></p>
+<p>n后面也可以跟随版本号比如：<code>n v 3.7.3</code></p>
+<p>但是我运行上述命令没有成功，可能因为我是windows系统，我采用了最笨的办法，官网重新下载覆盖安装！！！</p>
+<p>另外分享几个npm的常用命令</p>
+<p><code>npm -v</code>         #显示版本，检查npm 是否正确安装。</p>
+<p><code>npm install express</code>   #安装express模块</p>
+<p><code>npm install -g express</code>  #全局安装express模块</p>
+<p><code>npm list</code>         #列出已安装模块</p>
+<p><code>npm show express</code>     #显示模块详情</p>
+<p><code>npm update</code>       #升级当前目录下的项目的所有模块</p>
+<p><code>npm update express</code>    #升级当前目录下的项目的指定模块</p>
+<p><code>npm update -g express</code>  #升级全局安装的express模块</p>
+<p><code>npm uninstall express</code>  #删除指定的模块</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/12/11/webstorm-安装/" data-id="cjtz5epej000a9so7bcclfu0t" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-等于号和完全相等号区别-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/17/等于号和完全相等号区别-1/" class="article-date">
+  <time datetime="2018-11-17T09:17:26.000Z" itemprop="datePublished">2018-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/17/等于号和完全相等号区别-1/">等于号和完全相等号区别</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>‘==’与’===’的区别：<br>相等运算符（==）比较两个值是否相等，严格相等运算符（===）比较它们是否为“同一个值”。如果两个值不是同一类型，严格相等运算符（===）直接返回false，而相等运算符（==）会将它们转换成同一个类型，再用严格相等运算符进行比较。</p>
+<ol>
+<li>对于严格相关运算符’===’</li>
+</ol>
+<ul>
+<li>如果比较双方类型不同,直接返回<code>false</code></li>
+<li>同一类的原始类型值:值相同返回true,不同返回false</li>
+<li>复合类型值(object)：两个复合类型（对象、数组、函数）的数据比较时，不是比较它们的值是否相等，而是比较它们是否指向同一个地址。</li>
+<li>注意：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">NaN</span> === <span class="literal">NaN</span>  <span class="comment">// false</span></span><br><span class="line">+<span class="number">0</span> === <span class="number">-0</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li>对于相等运算符</li>
+</ol>
+<ul>
+<li>比较类型相同的数据时：相等运算符时和严格相等运算符一样。</li>
+<li><p>比较类型不同的数据</p>
+<ol>
+<li><p>对于number，string，Boolean：他们都转化为数字进行比较</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> == <span class="literal">true</span> <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 等同于 1 === Number(true)</span></span><br><span class="line"></span><br><span class="line"><span class="number">0</span> == <span class="literal">false</span> <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 等同于 0 === Number(false)</span></span><br><span class="line"></span><br><span class="line"><span class="number">2</span> == <span class="literal">true</span> <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 等同于 2 === Number(true)</span></span><br><span class="line"></span><br><span class="line"><span class="number">2</span> == <span class="literal">false</span> <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 等同于 2 === Number(false)</span></span><br><span class="line"></span><br><span class="line"><span class="string">'true'</span> == <span class="literal">true</span> <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 等同于 Number('true') === Number(true)</span></span><br><span class="line"><span class="comment">// 等同于 NaN === 1</span></span><br><span class="line"></span><br><span class="line"><span class="string">''</span> == <span class="number">0</span> <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 等同于 Number('') === 0</span></span><br><span class="line"><span class="comment">// 等同于 0 === 0</span></span><br><span class="line"></span><br><span class="line"><span class="string">''</span> == <span class="literal">false</span>  <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 等同于 Number('') === Number(false)</span></span><br><span class="line"><span class="comment">// 等同于 0 === 0</span></span><br><span class="line"></span><br><span class="line"><span class="string">'1'</span> == <span class="literal">true</span>  <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 等同于 Number('1') === Number(true)</span></span><br><span class="line"><span class="comment">// 等同于 1 === 1</span></span><br><span class="line"></span><br><span class="line"><span class="string">'\n  123  \t'</span> == <span class="number">123</span> <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 因为字符串转为数字时，省略前置和后置的空格</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>对于undefined和null：<br>undefined和null与其他类型的值比较时，结果都为false，它们互相比较时结果为true。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">false</span> == <span class="literal">null</span> <span class="comment">// false</span></span><br><span class="line"><span class="literal">false</span> == <span class="literal">undefined</span> <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="number">0</span> == <span class="literal">null</span> <span class="comment">// false</span></span><br><span class="line"><span class="number">0</span> == <span class="literal">undefined</span> <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="literal">undefined</span> == <span class="literal">null</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对于object类型与原始类型比较</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对象与数值比较时，对象转为数值</span></span><br><span class="line">[<span class="number">1</span>] == <span class="number">1</span> <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 等同于 Number([1]) == 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 对象与字符串比较时，对象转为字符串</span></span><br><span class="line">[<span class="number">1</span>] == <span class="string">'1'</span> <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 等同于 String([1]) == '1'</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>] == <span class="string">'1,2'</span> <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 等同于 String([1, 2]) == '1,2'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 对象与布尔值比较时，两边都转为数值</span></span><br><span class="line">[<span class="number">1</span>] == <span class="literal">true</span> <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 等同于 Number([1]) == Number(true)</span></span><br><span class="line">[<span class="number">2</span>] == <span class="literal">true</span> <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 等同于 Number([2]) == Number(true)</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/17/等于号和完全相等号区别-1/" data-id="cjtz5epej000b9so71t4sa0yw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-first-blog" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/17/first-blog/" class="article-date">
+  <time datetime="2018-11-17T07:57:19.000Z" itemprop="datePublished">2018-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/17/first-blog/">first-blog</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>博客误删重新发表</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/17/first-blog/" data-id="cjtz5epe300049so7o3ucqw5b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/02/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/02/css布局/">周记（第一篇）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/30/dva-Loading-使用/">dva Loading 使用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/22/写代码小技巧/">写代码小技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/20/bug总结/">bug总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Xiaodong Xing<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
